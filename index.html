@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cup26Predictor | Simulateur Coupe du Monde 2026</title>
+    <meta name="description" content="Simule la Coupe du Monde 2026 selon le format FIFA, génère une image partageable de ton vainqueur et de son parcours dès les 1/16 de finale." />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="canonical" href="https://cup26predictor.com/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="Cup26Predictor" />
+    <meta property="og:title" content="Cup26Predictor | Simulateur Coupe du Monde 2026" />
+    <meta property="og:description" content="Prédit le vainqueur, simule chaque tour, et partage une image de ton bracket avec cup26predictor.com." />
+    <meta property="og:url" content="https://cup26predictor.com/" />
+    <meta property="og:image" content="https://cup26predictor.com/assets/og-cover.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Cup26Predictor | Simulateur Coupe du Monde 2026" />
+    <meta name="twitter:description" content="Simulation FIFA 2026 complète + image du gagnant à partager sur X, WhatsApp, Instagram." />
+    <meta name="twitter:image" content="https://cup26predictor.com/assets/og-cover.png" />
+
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Cup26Predictor",
+        "url": "https://cup26predictor.com/",
+        "description": "Simulateur de Coupe du Monde 2026 respectant le format FIFA avec génération d'image partageable.",
+        "applicationCategory": "SportsApplication",
+        "inLanguage": "fr",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="hero">
+      <p class="brand">cup26predictor.com</p>
+      <h1>Le simulateur complet de la Coupe du Monde 2026</h1>
+      <p>
+        Choisis le vainqueur de chaque match à élimination directe depuis les
+        <strong>1/16 de finale</strong>, puis partage ton pronostic final.
+      </p>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>1) Configure les 32 équipes qualifiées</h2>
+        <p class="hint">
+          Tu peux pré-remplir avec tes favoris. Le moteur propagera ensuite les gagnants sur chaque tour.
+        </p>
+        <div id="round32" class="grid"></div>
+      </section>
+
+      <section class="card">
+        <h2>2) Simule les tours (format FIFA knock-out)</h2>
+        <div id="bracket" class="bracket"></div>
+      </section>
+
+      <section class="card highlight">
+        <h2>3) Génère et partage ton image</h2>
+        <p>Image avec champion + parcours complet + marque cup26predictor.com.</p>
+        <div class="actions">
+          <button id="generateImageBtn">Générer l'image</button>
+          <button id="downloadBtn" disabled>Télécharger</button>
+          <button id="copyCaptionBtn" disabled>Copier le texte</button>
+        </div>
+        <canvas id="shareCanvas" width="1200" height="675" aria-label="Image partageable de pronostic"></canvas>
+        <div class="social-row">
+          <a id="shareX" target="_blank" rel="noopener">Partager sur X</a>
+          <a id="shareWhatsapp" target="_blank" rel="noopener">Partager sur WhatsApp</a>
+          <a id="shareInstagram" target="_blank" rel="noopener">Instagram (guide)</a>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>4) Reçois les mises à jour (monétisation email)</h2>
+        <p class="hint">
+          Capture email pour newsletter, offres sponsorisées, ou lancement premium.
+        </p>
+        <form id="emailForm" class="email-form">
+          <input id="emailInput" type="email" required placeholder="ton@email.com" />
+          <button type="submit">Je m'inscris</button>
+        </form>
+        <p id="emailStatus" class="status"></p>
+      </section>
+    </main>
+
+    <footer>
+      <small>© 2026 cup26predictor.com — Simulation non officielle de la FIFA.</small>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
