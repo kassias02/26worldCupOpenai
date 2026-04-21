@@ -1,0 +1,10 @@
+{
+  "name": "Cup26Predictor",
+  "short_name": "Cup26",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a1020",
+  "theme_color": "#0a1020",
+  "description": "Simulateur Coupe du Monde 2026 avec image partageable.",
+  "icons": []
+}

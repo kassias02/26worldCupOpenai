@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cup26Predictor | Simulateur Coupe du Monde 2026</title>
+    <meta name="description" content="Simulateur Coupe du Monde 2026 avec vrais groupes, classement automatique FIFA, meilleurs 3e et bracket complet jusqu'au champion." />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="canonical" href="https://cup26predictor.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Cup26Predictor | Simulateur Coupe du Monde 2026" />
+    <meta property="og:description" content="Prédiction complète: groupes, classement auto, 1/32 puis bracket 1/16 et plus." />
+    <meta property="og:url" content="https://cup26predictor.com/" />
+    <meta property="og:image" content="https://cup26predictor.com/assets/og-cover.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Cup26Predictor" />
+    <meta name="twitter:description" content="Simulation FIFA 2026 ultra complète avec image partageable." />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <p class="brand">cup26predictor.com</p>
+      <h1>Simulateur complet FIFA World Cup 2026</h1>
+      <p>Tu saisis tous les scores de groupes, le classement se calcule automatiquement, puis le bracket (1/32, 1/16, etc.) se met à jour jusqu'au gagnant.</p>
+      <p id="groupsSource" class="hint"></p>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>1) Phase de groupes (vrais groupes)</h2>
+        <p class="hint">Règles appliquées: points, différence de buts, buts marqués, départage mini-classement en confrontations directes.</p>
+        <div id="groupsContainer" class="groups-grid"></div>
+      </section>
+
+      <section class="card">
+        <h2>2) Classements automatiques + 8 meilleurs 3e</h2>
+        <div id="standingsContainer"></div>
+      </section>
+
+      <section class="card">
+        <h2>3) Qualifiés + matchs des 1/32</h2>
+        <div id="qualifiedContainer"></div>
+        <div id="round32Container"></div>
+      </section>
+
+      <section class="card highlight">
+        <h2>4) Bracket élimination directe (gagnant au milieu)</h2>
+        <div id="knockoutBracket"></div>
+      </section>
+
+      <section class="card highlight">
+        <h2>5) Générer et partager ton image</h2>
+        <div class="actions">
+          <button id="generateImageBtn">Générer l'image</button>
+          <button id="downloadBtn" disabled>Télécharger</button>
+          <button id="copyCaptionBtn" disabled>Copier le texte</button>
+        </div>
+        <canvas id="shareCanvas" width="1200" height="675"></canvas>
+        <div class="social-row">
+          <a id="shareX" target="_blank" rel="noopener">Partager sur X</a>
+          <a id="shareWhatsapp" target="_blank" rel="noopener">Partager sur WhatsApp</a>
+          <a id="shareInstagram" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>6) Laisse ton email</h2>
+        <form id="emailForm" class="email-form">
+          <input id="emailInput" type="email" required placeholder="ton@email.com" />
+          <button type="submit">Je m'inscris</button>
+        </form>
+        <p id="emailStatus" class="status"></p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+:root {
+  --bg: #0a1020;
+  --card: #111a33;
+  --text: #f7f8fc;
+  --muted: #9fb0d8;
+  --accent: #32d4a4;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Inter, system-ui, sans-serif; background: #0a1020; color: var(--text); }
+.hero, main { max-width: 1200px; margin: 0 auto; padding: 1rem; }
+.brand { color: var(--accent); font-weight: 700; }
+.card { background: var(--card); border: 1px solid #2a3d68; border-radius: 14px; padding: 1rem; margin: 1rem 0; }
+.highlight { border-color: var(--accent); }
+.hint { color: var(--muted); }
+
+.groups-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: .9rem; }
+.group-card { border: 1px solid #2a3d68; border-radius: 10px; padding: .7rem; }
+.match-input { display: grid; grid-template-columns: 1.4fr 60px 20px 60px 1.4fr; gap: .3rem; align-items: center; margin-bottom: .4rem; }
+input, select, button { background: #0f1730; color: #fff; border: 1px solid #3b4f7f; border-radius: 8px; padding: .45rem .5rem; }
+button { cursor: pointer; }
+
+.standings-table { width: 100%; border-collapse: collapse; margin-bottom: .8rem; font-size: .9rem; }
+.standings-table th, .standings-table td { border: 1px solid #304571; padding: .3rem .4rem; text-align: center; }
+.standings-table td:nth-child(2), .standings-table th:nth-child(2) { text-align: left; }
+
+.qualified-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: .5rem; }
+
+.bracket-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(180px, 1fr));
+  gap: .8rem;
+  align-items: start;
+}
+.bracket-round { background: #0e1731; border: 1px solid #2d426f; border-radius: 10px; padding: .6rem; }
+.ko-match { display: grid; gap: .35rem; margin-bottom: .5rem; }
+.winner-center {
+  grid-column: 3 / span 1;
+  text-align: center;
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  padding: 1rem;
+  align-self: center;
+  background: #0f1f3d;
+}
+.winner-center p { font-size: 1.4rem; font-weight: 700; margin: 0; }
+
+.actions, .social-row, .email-form { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: .8rem; }
+.social-row a { background: #dfe8ff; color: #111; text-decoration: none; padding: .5rem .7rem; border-radius: 8px; }
+#shareCanvas { width: 100%; height: auto; border-radius: 10px; border: 1px solid #304571; }
+.status { color: var(--accent); }
